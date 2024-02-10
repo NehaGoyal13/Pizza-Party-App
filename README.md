@@ -1,2 +1,2 @@
-# Pizza-Party-App
+# The Pizza Party app
  
