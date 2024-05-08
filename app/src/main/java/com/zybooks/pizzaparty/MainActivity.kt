@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.RadioGroup
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private var totalPizzas = 0
     /** onCreate method, called when the activity is starting */
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
         /** Set the layout for the activity */
@@ -116,6 +119,30 @@ class MainActivity : AppCompatActivity() {
 //        /** Display the total number of pizzas needed in the TextView */
 //        numPizzasTextView.text = "Total pizzas: $totalPizzas"
 //    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.appbar_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        // Determine which menu option was selected
+        return when (item.itemId) {
+            R.id.action_add -> {
+                // Add selected
+                true
+            }
+            R.id.action_logout -> {
+                // Logout selected
+                true
+            }
+            R.id.action_about -> {
+                // About selected
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
     fun calculateClick(view: View) {
 
         // Get the text that was typed into the EditText

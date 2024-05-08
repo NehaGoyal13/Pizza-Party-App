@@ -11,4 +11,8 @@
     <string name="neha">Neha</string>
     <string name="neha1">neha1</string>
     <string name="neha2">neha2</string>
+    <string name="action_add"></string>
+    <string name="action_logout">Logout</string>
+    <string name="action_about">About</string>
+
 </resources>
